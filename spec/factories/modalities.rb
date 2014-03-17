@@ -2,7 +2,8 @@ require "faker"
 
 FactoryGirl.define do
   factory :modality do
-    title       { Faker::Lorem.sentence(3, false) }
-    description { Faker::Lorem.sentence(10, true) }
+    modalities = ["Soccer", "Baseball", "Rugby"]
+    sequence(:title) { |n| modalities[n - 1] }
+    description { Faker::Lorem.sentence(20, true) }
   end
 end
