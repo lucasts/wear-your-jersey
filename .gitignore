@@ -16,8 +16,7 @@ config/database.yml
 /db/*.sqlite3-journal
 
 # Local uploaded files
-/public/uploads
-/public/test_uploads
+/public/system
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
