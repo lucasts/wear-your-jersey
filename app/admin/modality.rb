@@ -7,7 +7,7 @@ ActiveAdmin.register Modality do
     end
   end
 
-  filter :title, :as => :string
+  filter :title
   
   sortable
 
@@ -15,7 +15,6 @@ ActiveAdmin.register Modality do
     sortable_handle_column
     selectable_column
     column :title
-    #column :description
     actions
   end
 

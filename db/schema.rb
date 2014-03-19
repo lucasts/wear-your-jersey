@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315162507) do
+ActiveRecord::Schema.define(version: 20140318000303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,5 +39,18 @@ ActiveRecord::Schema.define(version: 20140315162507) do
     t.text    "description"
     t.integer "position"
   end
+
+  create_table "teams", force: true do |t|
+    t.integer  "modality_id"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "position"
+    t.string   "team_image_file_name"
+    t.string   "team_image_content_type"
+    t.integer  "team_image_file_size"
+    t.datetime "team_image_updated_at"
+  end
+
+  add_index "teams", ["modality_id"], name: "index_teams_on_modality_id", using: :btree
 
 end

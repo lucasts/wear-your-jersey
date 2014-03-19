@@ -1,6 +1,7 @@
 if Modality.count.zero?
-  puts "Seed: Creating 3 modalities registers"
-  3.times do
-    FactoryGirl.create(:modality)
+  puts "Seed: Creating 2 modalities registers"
+  modalities = ["Baseball", "Rugby"]
+  modalities.each do |m|
+    FactoryGirl.create(:modality, title: m)
   end
 end
