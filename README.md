@@ -20,13 +20,13 @@ $ git clone git@github.com:wear-your-jersey/wear-your-jersey.git
 $ cd wear-your-jersey
 $ cp config/database.yml.example config/database.yml
 $ bundle install
-$ bundle exec rake db:setup
+$ bundle exec rake db:create db:migrate
 ```
 
 ### Seeds to development environment
 
 ```
-$ bundle exec rails 
+$ bundle exec rake db:seed:development
 ```
 
 ### Running
