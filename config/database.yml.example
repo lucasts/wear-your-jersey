@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: wear-your-jersey_development
+  pool: 5
+  username: postgres
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: wear-your-jersey_test
+  pool: 5
+  username: postgres
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: wear-your-jersey_production
+  pool: 5
+  username: postgres
+  password:
