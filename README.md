@@ -1,6 +1,6 @@
 # Wear Your Jersey
 
-Wear Yor Jersey is a extensible and open sorced platform with the intention of providing digital operations for associations focused on sports of any kind.
+Wear Yor Jersey is a extensible and open sorce platform with the intention of providing digital operations for associations focused on sports of any kind.
 
 The project is developed by enthusiasts that seek a great future for sports teams of all sizes. Delivering technology that enables an online presence with a viable and sustentable way, and fostering stimulating a community to build platform extensions.
 
