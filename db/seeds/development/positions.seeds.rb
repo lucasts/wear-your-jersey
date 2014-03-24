@@ -5,6 +5,7 @@ after "development:modalities" do
       3.times do
         FactoryGirl.create(:position, modality: modality)
       end
+      FactoryGirl.create(:position, title: "Coach", staff: true, modality: modality)
     end
   end
 end
