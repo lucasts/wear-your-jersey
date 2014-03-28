@@ -33,6 +33,7 @@ end
 group :test do
   gem "faker"
   gem "shoulda-matchers"
+  gem "codeclimate-test-reporter"
 end
 
 group :doc do
