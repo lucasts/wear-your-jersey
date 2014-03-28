@@ -12,3 +12,6 @@ notifications:
   email:
     recipients:
       - vinialm88@gmail.com
+addons:
+  code_climate:
+    repo_token: 4552d22317d8c99d6213c2b3d822008078def88233bd601b53b63f7d70f66ef9
