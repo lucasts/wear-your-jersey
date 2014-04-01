@@ -18,5 +18,9 @@ module WearYourJersey
         request_specs: false
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
+    
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locale', '*.{rb,yml}')]
+    config.i18n.enforce_available_locales = false
+    config.i18n.default_locale = :en
   end
 end
