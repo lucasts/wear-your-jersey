@@ -2,8 +2,6 @@
 
 Wear Yor Jersey is a extensible and open source platform with the intention of providing digital operations for associations focused on sports of any kind.
 
-The project is developed by enthusiasts that seek a brilliant future for sports teams of all sizes. Delivering technology that enables an online presence with a viable and sustentable way, and stimulating a community to build extensions to platform.
-
 Thus the associations can create their own middle of media to divulgate your work and even increasing your income with media spaces to sponsors and attraction of resources from associates.
 
 ### Dependencies
