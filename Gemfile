@@ -12,6 +12,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor'
 gem 'activeadmin-sortable'
 gem 'acts_as_list' # activeadmin-sortable dependencie
+gem 'active_decorator'
 
 # Assets
 gem 'sass-rails', '~> 4.0.0'

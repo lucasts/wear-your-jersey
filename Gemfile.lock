@@ -32,6 +32,7 @@ GEM
       activeadmin (>= 0.4.0)
       ejs
       rails (>= 3.0.0)
+    active_decorator (0.3.4)
     activeadmin-sortable (0.0.3)
       activeadmin (>= 0.4)
     activemodel (4.0.0)
@@ -222,6 +223,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_admin_editor
+  active_decorator
   activeadmin!
   activeadmin-sortable
   acts_as_list
