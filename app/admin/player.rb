@@ -37,13 +37,16 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
     end
     f.inputs do
       f.input :team_id,
-        :as         => :select, 
-        :collection => Team.all.map { |team| team.getFullNameAndId }, 
-        :input_html => { "data-module-team-picker-in" => true }
+        :as         => :select,
+        :collection => Team.all.map { |team| team.full_name_and_id },
+        :input_html => {
+          "data-get-positions-input" => "",
+          "data-get-positions-url"   => "/admin/teams/:id/positions_of_modality"
+        }
       f.input :position_id,
-        :as         => :select, 
+        :as         => :select,
         :collection => [],
-        :input_html => { "data-module-team-picker-out" => true }
+        :input_html => { "data-get-positions-output" => "" }
       f.input :number
     end
     f.actions

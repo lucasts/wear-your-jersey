@@ -7,7 +7,7 @@ ActiveAdmin.register Modality, { :sort_order => :position_asc } do
   end
 
   filter :title
-  
+
   sortable
 
   index do
