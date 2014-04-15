@@ -6,9 +6,11 @@ class Player < ActiveRecord::Base
   belongs_to :team
   belongs_to :position
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :nickname, presence: true
+  validates :first_name , presence: true
+  validates :last_name  , presence: true
+  validates :nickname   , presence: true
+  validates :team_id    , presence: true
+  validates :position_id, presence: true
 
   has_attached_file :player_image,
     :styles => { :thumb => "100x>", :small => "350x>" }
