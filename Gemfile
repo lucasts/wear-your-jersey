@@ -12,7 +12,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor'
 gem 'activeadmin-sortable'
 gem 'acts_as_list' # activeadmin-sortable dependencie
-gem 'active_decorator'
+gem 'draper'
 gem 'active_model_serializers'
 
 # Assets
