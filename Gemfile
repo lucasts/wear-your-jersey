@@ -13,6 +13,7 @@ gem 'active_admin_editor'
 gem 'activeadmin-sortable'
 gem 'acts_as_list' # activeadmin-sortable dependencie
 gem 'active_decorator'
+gem 'active_model_serializers'
 
 # Assets
 gem 'sass-rails', '~> 4.0.0'
