@@ -1,5 +1,4 @@
-ActiveAdmin.register Team do
-  config.sort_order = "position_asc"
+ActiveAdmin.register Team, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params

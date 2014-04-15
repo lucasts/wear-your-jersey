@@ -1,10 +1,10 @@
-ActiveAdmin.register Player do
-  config.sort_order = "position_asc"
+ActiveAdmin.register Player, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params
-      params.permit player: [:team_id, :position_id, :first_name, :last_name, :nickname,
-                             :player_image, :number, :birth, :hometown, :bio]
+      params.permit player: [:team_id, :position_id, :first_name,
+                             :last_name, :nickname, :player_image,
+                             :number, :birth, :hometown, :bio]
     end
   end
 

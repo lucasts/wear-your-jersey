@@ -1,5 +1,4 @@
-ActiveAdmin.register Position do
-  config.sort_order = "position_asc"
+ActiveAdmin.register Position, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params

@@ -1,5 +1,4 @@
-ActiveAdmin.register Modality do
-  config.sort_order = "position_asc"
+ActiveAdmin.register Modality, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params
