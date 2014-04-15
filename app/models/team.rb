@@ -8,9 +8,4 @@ class Team < ActiveRecord::Base
     :styles => { :thumb => "100x>", :small => "350x>", :medium => "650x>" }
   validates_attachment_content_type :team_image,
     :content_type => ["image/jpg", "image/jpeg", "image/png"]
-
-  def full_name_and_id
-    fullname = [modality.title, title].join(" - ")
-    [fullname, id]
-  end
 end
