@@ -38,7 +38,9 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
     f.inputs do
       f.input :team_id,
         :as         => :select,
-        :collection => Team.all.map { |team| team.full_name_and_id },
+        :collection => TeamDecorator.decorate_collection(Team.all).map { |team|
+          team.full_name_and_id
+        },
         :input_html => {
           "data-get-positions-input" => "",
           "data-get-positions-url"   => "/admin/teams/:id/positions_of_modality"
