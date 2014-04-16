@@ -2,16 +2,15 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params
-      params.permit player: [:team_id, :position_id, :first_name,
-                             :last_name, :nickname, :player_image,
-                             :number, :birth, :hometown, :bio]
+      params.permit player: [:team_id, :role_id, :first_name, :last_name, :nickname,
+                             :player_image, :number, :birth, :hometown, :bio]
     end
   end
 
   filter :first_name
   filter :nickname
   filter :team
-  filter :position
+  filter :role
 
   sortable
 
@@ -20,7 +19,7 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
     selectable_column
     column :first_name
     column :nickname
-    column :position
+    column :role
     column :team
     actions
   end
@@ -38,14 +37,12 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
     f.inputs do
       f.input :team_id,
         :as         => :select,
-        :collection => TeamDecorator.decorate_collection(Team.all).map { |team|
-          team.full_name_and_id
-        },
+        :collection => TeamDecorator.decorate_collection(Team.all).map { |team| team.full_name_and_id },
         :input_html => {
           "data-get-positions-input" => "",
-          "data-get-positions-url"   => "/admin/teams/:id/positions_of_modality"
+          "data-get-positions-url"   => "/admin/teams/:id/roles_of_modality"
         }
-      f.input :position_id,
+      f.input :role_id,
         :as         => :select,
         :collection => [],
         :input_html => { "data-get-positions-output" => "" }

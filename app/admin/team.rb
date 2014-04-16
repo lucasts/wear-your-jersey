@@ -44,8 +44,8 @@ ActiveAdmin.register Team, { :sort_order => :position_asc } do
     f.actions
   end
 
-  member_action :positions_of_modality, :method => :get do
-    @positions = Team.find(params[:id]).modality.positions
-    render json: @positions, root: false
+  member_action :roles_of_modality, :method => :get do
+    @roles = Team.find(params[:id]).modality.roles
+    render json: @roles, root: false
   end
 end

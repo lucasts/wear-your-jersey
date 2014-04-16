@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20140324225958) do
 
   create_table "players", force: true do |t|
     t.integer  "team_id"
-    t.integer  "position_id"
+    t.integer  "role_id"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "nickname"
@@ -57,17 +57,17 @@ ActiveRecord::Schema.define(version: 20140324225958) do
     t.text     "bio"
   end
 
-  add_index "players", ["position_id"], name: "index_players_on_position_id", using: :btree
+  add_index "players", ["role_id"], name: "index_players_on_role_id", using: :btree
   add_index "players", ["team_id"], name: "index_players_on_team_id", using: :btree
 
-  create_table "positions", force: true do |t|
+  create_table "roles", force: true do |t|
     t.integer "modality_id"
     t.string  "title"
     t.boolean "staff"
     t.integer "position"
   end
 
-  add_index "positions", ["modality_id"], name: "index_positions_on_modality_id", using: :btree
+  add_index "roles", ["modality_id"], name: "index_roles_on_modality_id", using: :btree
 
   create_table "teams", force: true do |t|
     t.integer  "modality_id"

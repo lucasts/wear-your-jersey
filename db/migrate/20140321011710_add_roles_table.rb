@@ -1,6 +1,6 @@
-class AddPositionsTable < ActiveRecord::Migration
+class AddRolesTable < ActiveRecord::Migration
   def change
-    create_table :positions do |t|
+    create_table :roles do |t|
       t.references :modality, index: true
       t.string     :title
       t.boolean    :staff

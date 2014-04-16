@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Position do
+describe Role do
   describe "association" do
     it { should belong_to :modality }
   end

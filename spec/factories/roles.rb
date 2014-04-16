@@ -1,7 +1,7 @@
 require "faker"
 
 FactoryGirl.define do
-  factory :position do
+  factory :role do
     title { Faker::Lorem.word }
     staff { false }
     modality
