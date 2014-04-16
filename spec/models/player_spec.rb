@@ -6,7 +6,7 @@ describe Player do
     it { should belong_to :role }
   end
 
-  describe "validation of required fields (first_name, nickname)" do
+  describe "validation of required fields" do
     it { should validate_presence_of :first_name }
     it { should validate_presence_of :last_name }
     it { should validate_presence_of :nickname }
