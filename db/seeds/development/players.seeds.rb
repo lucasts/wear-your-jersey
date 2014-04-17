@@ -4,7 +4,7 @@ after "development:roles", "development:teams" do
     Team.all.each do |team|
       10.times do
         role = team.modality.roles.sample
-        FactoryGirl.create(:player, role: role)
+        FactoryGirl.create(:player, role: role, team: team)
       end
     end
   end
