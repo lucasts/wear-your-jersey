@@ -24,7 +24,23 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
     actions
   end
 
-  #TODO show
+  show do |player|
+    attributes_table do
+      row :first_name
+      row :last_name
+      row :nickname
+      row :player_image do
+        image_tag player.player_image.url(:thumb)
+      end
+      row :birth
+      row :hometown
+      row :bio do
+        player.bio.html_safe
+      end
+      row :team
+      row :role
+    end
+  end
 
   form do |f|
     f.inputs do
