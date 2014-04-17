@@ -2,7 +2,6 @@ class Player < ActiveRecord::Base
   belongs_to :role
   belongs_to :team
   acts_as_list
-  attr_accessor :nickname
 
   validates :first_name, presence: true
   validates :last_name, presence: true

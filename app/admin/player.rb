@@ -33,6 +33,8 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
       f.input :nickname
       f.input :player_image, :required => false
       f.input :birth, :as => :datepicker
+      f.input :hometown
+      f.input :bio, :as => :html_editor
     end
     f.inputs do
       f.input :team_id,
