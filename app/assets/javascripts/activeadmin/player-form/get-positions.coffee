@@ -19,13 +19,9 @@ define 'activeadmin/player-form/get-positions', [], () ->
                 .data("get-positions-url")
                 .replace(":id", $input.val())
 
-    _parseTemplateFunction = @parseTemplate
-
-    $.getJSON url, (response) ->
-      options.push _parseTemplateFunction(position.id, position.title) for position in response
-      $output
-        .empty()
-        .append(options)
+    $.getJSON url, (response) =>
+      options.push @parseTemplate(position.id, position.title) for position in response
+      $output.empty().append(options)
 
   parseTemplate: (value, text) ->
     return "<option value='#{value}'>#{text}</option>"
