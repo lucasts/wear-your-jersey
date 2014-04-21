@@ -1,5 +1,5 @@
 if Modality.count.zero?
-  puts "Seed: Creating 2 modalities registers"
+  puts "Seed: Creating modalities"
   modalities = ["Baseball", "Rugby"]
   modalities.each do |m|
     FactoryGirl.create(:modality, title: m)

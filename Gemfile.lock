@@ -32,6 +32,8 @@ GEM
       activeadmin (>= 0.4.0)
       ejs
       rails (>= 3.0.0)
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activeadmin-sortable (0.0.3)
       activeadmin (>= 0.4)
     activemodel (4.0.0)
@@ -84,6 +86,11 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.1)
     dotenv (0.10.0)
+    draper (1.3.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
     ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -165,6 +172,7 @@ GEM
       polyamorous (~> 0.6.0)
     rdoc (4.1.1)
       json (~> 1.4)
+    request_store (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (2.14.7)
@@ -222,11 +230,13 @@ PLATFORMS
 
 DEPENDENCIES
   active_admin_editor
+  active_model_serializers
   activeadmin!
   activeadmin-sortable
   acts_as_list
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)
+  draper
   factory_girl_rails
   faker
   foreman

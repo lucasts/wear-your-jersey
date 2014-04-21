@@ -1,5 +1,4 @@
-ActiveAdmin.register Team do
-  config.sort_order = "position_asc"
+ActiveAdmin.register Team, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params
@@ -43,5 +42,10 @@ ActiveAdmin.register Team do
       f.input :description, as: :html_editor
     end
     f.actions
+  end
+
+  member_action :roles_of_modality, :method => :get do
+    @roles = Team.find(params[:id]).modality.roles
+    render json: @roles, root: false
   end
 end

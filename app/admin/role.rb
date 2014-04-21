@@ -1,5 +1,4 @@
-ActiveAdmin.register Position do
-  config.sort_order = "position_asc"
+ActiveAdmin.register Role, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params
@@ -26,7 +25,7 @@ ActiveAdmin.register Position do
       row :title
       row :modality
       row :staff do
-        if position.staff
+        if role.staff
           "YES"
         else
           "NO"

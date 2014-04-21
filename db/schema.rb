@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140321011710) do
+ActiveRecord::Schema.define(version: 20140324225958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,14 +40,34 @@ ActiveRecord::Schema.define(version: 20140321011710) do
     t.integer "position"
   end
 
-  create_table "positions", force: true do |t|
+  create_table "players", force: true do |t|
+    t.integer  "team_id"
+    t.integer  "role_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "nickname"
+    t.integer  "position"
+    t.string   "player_image_file_name"
+    t.string   "player_image_content_type"
+    t.integer  "player_image_file_size"
+    t.datetime "player_image_updated_at"
+    t.integer  "number"
+    t.date     "birth"
+    t.string   "hometown"
+    t.text     "bio"
+  end
+
+  add_index "players", ["role_id"], name: "index_players_on_role_id", using: :btree
+  add_index "players", ["team_id"], name: "index_players_on_team_id", using: :btree
+
+  create_table "roles", force: true do |t|
     t.integer "modality_id"
     t.string  "title"
     t.boolean "staff"
     t.integer "position"
   end
 
-  add_index "positions", ["modality_id"], name: "index_positions_on_modality_id", using: :btree
+  add_index "roles", ["modality_id"], name: "index_roles_on_modality_id", using: :btree
 
   create_table "teams", force: true do |t|
     t.integer  "modality_id"
