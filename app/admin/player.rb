@@ -48,9 +48,6 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
       f.input :last_name
       f.input :nickname
       f.input :player_image, :required => false
-      f.input :birth, :as => :datepicker
-      f.input :hometown
-      f.input :bio, :as => :html_editor
     end
     f.inputs do
       f.input :team_id,
@@ -63,8 +60,14 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
       f.input :role_id,
         :as         => :select,
         :collection => [],
-        :input_html => { "data-get-positions-output" => "" }
+        :input_html => { "data-get-positions-output" => "" },
+        :hint       => "Select a team first"
       f.input :number
+    end
+    f.inputs do
+      f.input :birth, :as => :datepicker
+      f.input :hometown
+      f.input :bio, :as => :html_editor
     end
     f.actions
   end
