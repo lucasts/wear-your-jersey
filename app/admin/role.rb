@@ -25,11 +25,7 @@ ActiveAdmin.register Role, { :sort_order => :position_asc } do
       row :title
       row :modality
       row :staff do
-        if role.staff
-          "YES"
-        else
-          "NO"
-        end
+        role.staff ? "yes" : "no"
       end
     end
   end

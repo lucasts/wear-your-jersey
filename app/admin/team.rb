@@ -39,13 +39,13 @@ ActiveAdmin.register Team, { :sort_order => :position_asc } do
         :as         => :select,
         :collection => Modality.all.map { |m| [m.title, m.id] }
       f.input :team_image, :required => false
-      f.input :description, as: :html_editor
+      f.input :description, :as => :html_editor
     end
     f.actions
   end
 
   member_action :roles_of_modality, :method => :get do
-    @roles = Team.find(params[:id]).modality.roles
-    render json: @roles, root: false
+    roles = Team.find(params[:id]).modality.roles
+    render json: roles, root: false
   end
 end

@@ -29,7 +29,7 @@ ActiveAdmin.register Modality, { :sort_order => :position_asc } do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :description, as: :html_editor
+      f.input :description, :as => :html_editor
     end
     f.actions
   end
