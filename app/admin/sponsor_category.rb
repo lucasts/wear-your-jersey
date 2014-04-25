@@ -32,7 +32,9 @@ ActiveAdmin.register SponsorCategory, { :sort_order => :position_asc } do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :grandeur, :as => :select, :collection => SponsorCategoryGrandeurType.to_a
+      f.input :grandeur,
+        :as => :select,
+        :collection => SponsorCategoryGrandeurType.to_a
     end
     f.actions
   end
