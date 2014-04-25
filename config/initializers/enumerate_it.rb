@@ -1,1 +1,1 @@
-ActiveRecord::Base.__send__ :extend, EnumerateIt
+ActiveRecord::Base.extend EnumerateIt
