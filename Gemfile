@@ -14,6 +14,7 @@ gem 'activeadmin-sortable'
 gem 'acts_as_list' # activeadmin-sortable dependencie
 gem 'draper'
 gem 'active_model_serializers'
+gem 'enumerate_it'
 
 # Assets
 gem 'sass-rails', '~> 4.0.0'
