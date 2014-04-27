@@ -5,6 +5,7 @@ class AddSponsorsTable < ActiveRecord::Migration
       t.attachment :sponsor_image
       t.text       :description
       t.references :sponsor_category, index: true
+      t.integer    :position # field used to sortable registers
     end
   end
 end

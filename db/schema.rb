@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20140426171149) do
     t.datetime "sponsor_image_updated_at"
     t.text     "description"
     t.integer  "sponsor_category_id"
+    t.integer  "position"
   end
 
   add_index "sponsors", ["sponsor_category_id"], name: "index_sponsors_on_sponsor_category_id", using: :btree
