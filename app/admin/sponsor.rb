@@ -1,5 +1,7 @@
 ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
 
+  menu :parent => "Sponsors"
+
   controller do
     def permitted_params
       params.permit :sponsor => [:title, :description, :sponsor_image, :sponsor_category_id]

@@ -1,5 +1,7 @@
 ActiveAdmin.register Team, { :sort_order => :position_asc } do
 
+  menu :parent => "Teams and players"
+
   controller do
     def permitted_params
       params.permit team: [:modality_id, :title, :description, :team_image]

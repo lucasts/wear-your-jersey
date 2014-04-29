@@ -1,5 +1,7 @@
 ActiveAdmin.register Player, { :sort_order => :position_asc } do
 
+  menu :parent => "Teams and players"
+
   controller do
     def permitted_params
       params.permit player: [:team_id, :role_id, :first_name, :last_name, :nickname,

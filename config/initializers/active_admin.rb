@@ -1,11 +1,19 @@
 ActiveAdmin.setup do |config|
-  config.site_title = "Wear Your Jersey"
+  config.site_title            = "Wear Your Jersey"
   config.authentication_method = :authenticate_admin_user!
-  config.current_user_method = :current_admin_user
-  config.logout_link_path = :destroy_admin_user_session_path
-  config.allow_comments = false
-  config.batch_actions = true
-  config.filters = true
+  config.current_user_method   = :current_admin_user
+  config.logout_link_path      = :destroy_admin_user_session_path
+  config.allow_comments        = false
+  config.batch_actions         = true
+  config.filters               = true
+
+  config.namespace :admin do |admin|
+    admin.build_menu do |menu|
+      menu.add :label => "Modalities",        :priority => 0
+      menu.add :label => "Teams and players", :priority => 1
+      menu.add :label => "Sponsors",          :priority => 3
+    end
+  end
 
   # == Register Stylesheets & Javascripts
   #

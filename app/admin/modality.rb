@@ -1,5 +1,7 @@
 ActiveAdmin.register Modality, { :sort_order => :position_asc } do
 
+  menu :parent   => "Modalities"
+
   controller do
     def permitted_params
       params.permit modality: [:title, :description]
