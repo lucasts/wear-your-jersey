@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430014553) do
+ActiveRecord::Schema.define(version: 20140430021537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20140430014553) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "events", force: true do |t|
+    t.integer "team_id"
+    t.string  "locale"
+    t.text    "description"
+    t.string  "opponent"
+    t.date    "date"
+    t.time    "time"
+  end
+
+  add_index "events", ["team_id"], name: "index_events_on_team_id", using: :btree
 
   create_table "modalities", force: true do |t|
     t.string  "title"
