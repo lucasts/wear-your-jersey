@@ -21,7 +21,18 @@ ActiveAdmin.register Event do
     actions
   end
 
-
+  show do |event|
+    attributes_table do
+      row :team
+      row :locale
+      row :description do
+        event.description.html_safe
+      end
+      row :opponent
+      row :date
+      row :time
+    end
+  end
 
   form do |f|
     f.inputs do
