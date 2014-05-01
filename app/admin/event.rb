@@ -2,8 +2,7 @@ ActiveAdmin.register Event do
 
   controller do
     def permitted_params
-      params.permit event: [:team_id, :locale, :description,
-                            :opponent, :date, :time]
+      params.permit event: [:team_id, :locale, :description, :opponent, :date]
     end
   end
 
@@ -30,7 +29,6 @@ ActiveAdmin.register Event do
       end
       row :opponent
       row :date
-      row :time
     end
   end
 
@@ -44,7 +42,6 @@ ActiveAdmin.register Event do
       f.input :description, :as => :html_editor
       f.input :opponent
       f.input :date, :as => :datepicker
-      f.input :time
     end
     f.actions
   end
