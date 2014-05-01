@@ -35,12 +35,11 @@ ActiveRecord::Schema.define(version: 20140430021537) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "events", force: true do |t|
-    t.integer "team_id"
-    t.string  "locale"
-    t.text    "description"
-    t.string  "opponent"
-    t.date    "date"
-    t.time    "time"
+    t.integer  "team_id"
+    t.string   "locale"
+    t.text     "description"
+    t.string   "opponent"
+    t.datetime "date"
   end
 
   add_index "events", ["team_id"], name: "index_events_on_team_id", using: :btree

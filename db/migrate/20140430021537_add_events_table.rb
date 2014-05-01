@@ -5,8 +5,7 @@ class AddEventsTable < ActiveRecord::Migration
       t.string     :locale
       t.text       :description
       t.string     :opponent
-      t.date       :date
-      t.time       :time
+      t.datetime   :date
     end
   end
 end
