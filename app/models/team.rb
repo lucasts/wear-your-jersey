@@ -1,5 +1,6 @@
 class Team < ActiveRecord::Base
   belongs_to :modality
+  has_many :events
   validates :title, presence: true
   validates :description, presence: true
   acts_as_list
