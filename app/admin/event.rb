@@ -2,7 +2,8 @@ ActiveAdmin.register Event do
 
   controller do
     def permitted_params
-      params.permit event: [:team_id, :locale, :description, :opponent, :date_date, :date_time_hour, :date_time_minute]
+      params.permit event: [:team_id, :locale, :description, :opponent,
+                            :date_date, :date_time_hour, :date_time_minute]
     end
   end
 
