@@ -2,7 +2,7 @@ ActiveAdmin.register Event do
 
   controller do
     def permitted_params
-      params.permit event: [:team_id, :locale, :description, :opponent, :date]
+      params.permit event: [:team_id, :locale, :description, :opponent, :date_date, :date_time_hour, :date_time_minute]
     end
   end
 
@@ -41,7 +41,7 @@ ActiveAdmin.register Event do
       f.input :locale
       f.input :description, :as => :html_editor
       f.input :opponent
-      f.input :date, :as => :datepicker
+      f.input :date, :as => :just_datetime_picker
     end
     f.actions
   end
