@@ -119,6 +119,9 @@ GEM
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
     json (1.8.1)
+    just-datetime-picker (0.0.6)
+      activeadmin (>= 0.4.4)
+      formtastic (>= 2.0.0)
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -244,6 +247,7 @@ DEPENDENCIES
   faker
   foreman
   jquery-rails
+  just-datetime-picker
   neat
   paperclip (~> 4.1)
   pg
