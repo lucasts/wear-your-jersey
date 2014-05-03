@@ -10,7 +10,6 @@ ActiveAdmin.register Event do
   filter :team
   filter :locale
   filter :opponent
-  filter :date
 
   index do
     selectable_column
