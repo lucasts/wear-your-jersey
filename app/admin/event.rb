@@ -13,7 +13,10 @@ ActiveAdmin.register Event do
 
   index do
     selectable_column
-    column :team
+    column :team do |event|
+      team_full_name = event.team.decorate.full_name_and_id.first
+      link_to(team_full_name, admin_team_url(event.team.id))
+    end
     column :locale
     column :opponent
     column :date
