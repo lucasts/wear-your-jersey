@@ -3,3 +3,8 @@ $reset-font-size: 12px;
 body {
   font-size: $reset-font-size;
 }
+
+.wrapper {
+  @include outer-container;
+  max-width: 1200px;
+}
