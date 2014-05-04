@@ -7,9 +7,9 @@ ActiveAdmin.register Event do
     end
   end
 
-  filter :team, :collection => TeamDecorator.decorate_collection(Team.all).map do |team|
-    team.full_name_and_id
-  end
+  filter :team, :collection => TeamDecorator
+                                 .decorate_collection(Team.all)
+                                 .map { |team| team.full_name_and_id }
   filter :locale
   filter :opponent
 

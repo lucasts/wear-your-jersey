@@ -11,7 +11,9 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
 
   filter :first_name
   filter :nickname
-  filter :team
+  filter :team, :collection => TeamDecorator
+                                 .decorate_collection(Team.all)
+                                 .map { |team| team.full_name_and_id }
   filter :role
 
   sortable
@@ -22,7 +24,10 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
     column :first_name
     column :nickname
     column :role
-    column :team
+    column :team do |player|
+      team_full_name = player.team.decorate.full_name_and_id.first
+      link_to(team_full_name, admin_team_url(player.team.id))
+    end
     actions
   end
 
