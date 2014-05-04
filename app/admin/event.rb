@@ -7,7 +7,9 @@ ActiveAdmin.register Event do
     end
   end
 
-  filter :team
+  filter :team, :collection => TeamDecorator.decorate_collection(Team.all).map do |team|
+    team.full_name_and_id
+  end
   filter :locale
   filter :opponent
 
@@ -39,8 +41,9 @@ ActiveAdmin.register Event do
     f.inputs do
       f.input :team_id,
         :as         => :select,
-        :collection => TeamDecorator.
-                         decorate_collection(Team.all).map { |team| team.full_name_and_id }
+        :collection => TeamDecorator.decorate_collection(Team.all).map do |team|
+          team.full_name_and_id
+        end
       f.input :locale
       f.input :description, :as => :html_editor
       f.input :opponent
