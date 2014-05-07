@@ -30,7 +30,7 @@ $ bundle exec rake db:seed:development
 ### Running
 
 ```
-$ bundle puma -p 5000
+$ bundle exec puma
 ```
 
 ### Accessing
@@ -46,11 +46,3 @@ This app uses Rspec and Factory Girl.
 ```
 $ bundle exec rspec
 ```
-
----
-
-## Project
-
-The project progress it's being registered in milestones, in the repository itself.
-
-If you want collaborate with Wear Your Jersey following some milestone, we recommended use this [way to turn GitHub issues in pull-requests](http://opensoul.org/2012/11/09/convert-a-github-issue-into-a-pull-request/)
