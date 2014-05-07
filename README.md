@@ -1,6 +1,6 @@
 # Wear Your Jersey 
 
-##[![Build Status](https://travis-ci.org/wear-your-jersey/wear-your-jersey.svg?branch=master)](https://travis-ci.org/wear-your-jersey/wear-your-jersey) [![Code Climate](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey.png)](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey) [![Code Climate](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey/coverage.png)](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey) [![Dependency Status](https://gemnasium.com/wear-your-jersey/wear-your-jersey.svg)](https://gemnasium.com/wear-your-jersey/wear-your-jersey)
+[![Build Status](https://travis-ci.org/wear-your-jersey/wear-your-jersey.svg?branch=master)](https://travis-ci.org/wear-your-jersey/wear-your-jersey) [![Code Climate](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey.png)](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey) [![Code Climate](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey/coverage.png)](https://codeclimate.com/github/wear-your-jersey/wear-your-jersey) [![Dependency Status](https://gemnasium.com/wear-your-jersey/wear-your-jersey.svg)](https://gemnasium.com/wear-your-jersey/wear-your-jersey)
 
 Wear Yor Jersey is a extensible and open source platform with the intention of providing digital operations for associations focused on sports of any kind.
 
