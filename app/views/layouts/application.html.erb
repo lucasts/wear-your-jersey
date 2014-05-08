@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="<%= asset_path 'favicon-24x24.png' %>"/>
   <title>WearYourJersey</title>
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= csrf_meta_tags %>
@@ -8,6 +9,7 @@
 <body>
 
 <%= render 'shared/header' %>
+<%= render 'shared/menu' %>
 
 <div class="wrapper">
   <%= yield %>
