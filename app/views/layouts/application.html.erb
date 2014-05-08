@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="<%= asset_path 'favicon-24x24.png' %>"/>
   <title>WearYourJersey</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<%= render 'shared/header' %>
+<%= render 'shared/menu' %>
+
+<div class="wrapper">
+  <%= yield %>
+</div>
+
+<%= render 'shared/footer' %>
 
 </body>
 </html>
