@@ -1,0 +1,59 @@
+nav {
+  background: $dark-grey;
+  margin-top: -40px;
+  height: $menu-height;
+}
+
+.menu, .sub-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu {
+  margin-left: 150px;
+  height: $menu-height;
+
+  .menu-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    position: relative;
+    white-space: nowrap;
+    height: $menu-height;
+
+    > a {
+    @include transition (all 0.2s ease-in-out);
+      color: $white;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: $menu-height;
+    }
+
+    &:hover {
+      background: $not-so-dark-grey;
+
+      > a {
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  background: $not-so-dark-grey;
+  display: none;
+  margin-left: -10px;
+  top: 100%;
+  box-shadow: 2px 2px 3px $shadow;
+
+  .sub-menu-item > a {
+    color: $dark-grey;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 15px;
+  }
+}
+
+.menu .menu-item:hover .sub-menu { display: block }
