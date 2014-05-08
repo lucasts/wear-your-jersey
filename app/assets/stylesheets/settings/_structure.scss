@@ -1,5 +1,4 @@
 $reset-font-size: 12px;
-
 body {
   font-size: $reset-font-size;
 }
@@ -7,13 +6,11 @@ body {
 .wrapper {
   @include outer-container;
   padding: 0 10px;
-  max-width: 1200px;
+  max-width: 2000px;
 }
-
 .main {
   @include span-columns(7);
 }
-
 .another {
   @include span-columns(5);
 }
