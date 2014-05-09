@@ -1,4 +1,4 @@
-$reset-font-size: 12px;
+$reset-font-size: 14px;
 body {
   font-size: $reset-font-size;
 }
@@ -9,8 +9,19 @@ body {
   max-width: 2000px;
 }
 .main {
-  @include span-columns(7);
+  @include span-columns(8);
+
+  @media screen and (max-width: 800px) {
+    @include span-columns(12);
+  }
 }
-.another {
-  @include span-columns(5);
+.main-side-column {
+  @include span-columns(4);
+}
+.side-column {
+  @include span-columns(2);
+
+  @media screen and (max-width: 800px) {
+    @include span-columns(6);
+  }
 }

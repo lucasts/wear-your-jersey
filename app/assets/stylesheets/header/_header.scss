@@ -7,4 +7,22 @@ header {
     display: inline-block;
     vertical-align: middle;
   }
+
+  .header-partners-list {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0;
+  }
+
+  .header-partners-list-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    height: 110px;
+    margin-left: 10px;
+    text-align: right;
+    overflow: hidden;
+  }
 }

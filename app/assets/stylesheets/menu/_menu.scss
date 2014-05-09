@@ -1,5 +1,5 @@
 nav {
-  background: $dark-grey;
+  background: $not-so-dark-grey;
   margin-top: -40px;
   height: $menu-height;
 }
@@ -22,33 +22,25 @@ nav {
     height: $menu-height;
 
     > a {
-    @include transition (all 0.2s ease-in-out);
       color: $white;
       text-decoration: none;
       font-size: 20px;
       line-height: $menu-height;
     }
 
-    &:hover {
-      background: $not-so-dark-grey;
-
-      > a {
-        color: $dark-grey;
-      }
-    }
+    &:hover { background: $dark-grey; }
   }
 }
 
 .sub-menu {
   position: absolute;
-  background: $not-so-dark-grey;
+  background: $dark-grey;
   display: none;
   margin-left: -10px;
   top: 100%;
-  box-shadow: 2px 2px 3px $shadow;
 
   .sub-menu-item > a {
-    color: $dark-grey;
+    color: $white;
     text-decoration: none;
     padding: 10px;
     display: block;
