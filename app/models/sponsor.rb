@@ -8,6 +8,5 @@ class Sponsor < ActiveRecord::Base
   validates_attachment_content_type :sponsor_image,
     :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
-  scope :master_sponsors, -> { joins(:sponsor_category).
-    where('sponsor_categories.grandeur' => SponsorCategoryGrandeurType::MASTER_SPONSOR) }
+  scope :ordered, -> { order(:position) }
 end
