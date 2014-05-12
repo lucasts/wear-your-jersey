@@ -9,6 +9,7 @@ ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
   end
 
   filter :title
+  filter :sponsor_category
 
   sortable
 
