@@ -7,6 +7,4 @@ class Sponsor < ActiveRecord::Base
     :styles => { :thumb => "100x>", :small => "350x>" }
   validates_attachment_content_type :sponsor_image,
     :content_type => ["image/jpg", "image/jpeg", "image/png"]
-
-  scope :ordered, -> { order(:position) }
 end
