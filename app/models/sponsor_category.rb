@@ -6,8 +6,9 @@ class SponsorCategory < ActiveRecord::Base
   validates :grandeur, presence: true
   acts_as_list
 
-  scope :master_categories, -> { includes(:sponsors)
-    .where(grandeur: SponsorCategoryGrandeurType::MASTER_SPONSOR)
+  scope :categories_by_grandeur, ->(grandeur) {
+    includes(:sponsors)
+    .where(grandeur: grandeur)
     .order('sponsor_categories.position', 'sponsors.position')
   }
 end
