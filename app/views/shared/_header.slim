@@ -1,0 +1,15 @@
+header
+  .wrapper
+    .superior-header
+      = image_tag "emblem.svg", class: "emblem"
+
+      ul.header-partners-list
+        - @master_categories.each do |category|
+          li.header-partners-list-item.title = category.title
+          - category.sponsors.each do |sponsor|
+            li.header-partners-list-item
+              - if sponsor.link.blank?
+                = image_tag sponsor.sponsor_image.url(:thumb)
+              - else
+                = link_to sponsor.link, target: '_blank'
+                  = image_tag sponsor.sponsor_image.url(:thumb)
