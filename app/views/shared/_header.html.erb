@@ -5,7 +5,7 @@
       <ul class="header-partners-list">
         <% @master_categories.each do |category| %>
           <li class="header-partners-list-item title"><%= category.title %>:</li>
-          <% category.related_sponsors.each do |sponsor| %>
+          <% category.sponsors.each do |sponsor| %>
             <li class="header-partners-list-item">
               <%= image_tag sponsor.sponsor_image.url(:small) %>
             </li>
