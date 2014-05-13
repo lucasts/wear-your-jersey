@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   private
 
   def get_categories_of_master_sponsors
-    @master_categories = SponsorCategory.master_categories
+    @master_categories = SponsorCategory
+      .categories_by_grandeur(SponsorCategoryGrandeurType::MASTER_SPONSOR)
   end
 end
