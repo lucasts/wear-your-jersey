@@ -4,11 +4,13 @@ ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
 
   controller do
     def permitted_params
-      params.permit :sponsor => [:title, :description, :sponsor_image, :sponsor_category_id]
+      params.permit :sponsor => [:title, :description, :sponsor_image,
+                                 :sponsor_category_id, :link]
     end
   end
 
   filter :title
+  filter :sponsor_category
 
   sortable
 
@@ -17,7 +19,7 @@ ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
     selectable_column
     column :title
     column :sponsor_category
-    column :description
+    column :link
     actions
   end
 
@@ -25,6 +27,9 @@ ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
     attributes_table do
       row :title
       row :sponsor_category
+      row :link do
+        link_to sponsor.link, sponsor.link
+      end
       row :sponsor_image do
         image_tag sponsor.sponsor_image.url(:thumb)
       end
@@ -38,6 +43,7 @@ ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
     f.inputs do
       f.input :title
       f.input :sponsor_category
+      f.input :link
       f.input :sponsor_image, :required => false
       f.input :description, :as => :html_editor
     end

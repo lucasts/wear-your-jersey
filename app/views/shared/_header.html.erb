@@ -2,6 +2,22 @@
   <div class="wrapper">
     <div class="superior-header">
       <%= image_tag "emblem.svg", :class => "emblem" %>
+      <ul class="header-partners-list">
+        <% @master_categories.each do |category| %>
+          <li class="header-partners-list-item title"><%= category.title %>:</li>
+          <% category.sponsors.each do |sponsor| %>
+            <li class="header-partners-list-item">
+              <% if sponsor.link.blank? %>
+                <%= image_tag sponsor.sponsor_image.url(:thumb) %>
+              <% else %>
+                <%= link_to sponsor.link, target: '_blank' do %>
+                  <%= image_tag sponsor.sponsor_image.url(:thumb) %>
+                <% end %>
+              <% end %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
     </div>
   </div>
 </header>

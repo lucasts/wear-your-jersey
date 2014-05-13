@@ -36,6 +36,11 @@ group :development, :test do
   gem "seedbank"
 end
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 group :test do
   gem "faker"
   gem "shoulda-matchers"
