@@ -7,7 +7,13 @@
           <li class="header-partners-list-item title"><%= category.title %>:</li>
           <% category.sponsors.each do |sponsor| %>
             <li class="header-partners-list-item">
-              <%= image_tag sponsor.sponsor_image.url(:small) %>
+              <% if sponsor.link.blank? %>
+                <%= image_tag sponsor.sponsor_image.url(:small) %>
+              <% else %>
+                <%= link_to sponsor.link, target: '_blank' do %>
+                  <%= image_tag sponsor.sponsor_image.url(:small) %>
+                <% end %>
+              <% end %>
             </li>
           <% end %>
         <% end %>
