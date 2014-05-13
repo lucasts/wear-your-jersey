@@ -1,6 +1,6 @@
-ActiveAdmin.register Modality, { :sort_order => :position_asc } do
+ActiveAdmin.register Modality, { sort_order: :position_asc } do
 
-  menu :parent   => "Modalities"
+  menu parent: "Modalities"
 
   controller do
     def permitted_params
@@ -31,7 +31,7 @@ ActiveAdmin.register Modality, { :sort_order => :position_asc } do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :description, :as => :html_editor
+      f.input :description, as: :html_editor
     end
     f.actions
   end

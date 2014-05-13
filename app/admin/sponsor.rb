@@ -1,11 +1,11 @@
-ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
+ActiveAdmin.register Sponsor, { sort_order: :position_asc } do
 
-  menu :parent => "Sponsors"
+  menu parent: "Sponsors"
 
   controller do
     def permitted_params
-      params.permit :sponsor => [:title, :description, :sponsor_image,
-                                 :sponsor_category_id, :link]
+      params.permit sponsor: [:title, :description, :sponsor_image,
+                              :sponsor_category_id, :link]
     end
   end
 
@@ -44,8 +44,8 @@ ActiveAdmin.register Sponsor, { :sort_order => :position_asc } do
       f.input :title
       f.input :sponsor_category
       f.input :link
-      f.input :sponsor_image, :required => false
-      f.input :description, :as => :html_editor
+      f.input :sponsor_image, required: false
+      f.input :description, as: :html_editor
     end
     f.actions
   end

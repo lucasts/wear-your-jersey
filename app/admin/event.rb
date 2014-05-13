@@ -7,9 +7,9 @@ ActiveAdmin.register Event do
     end
   end
 
-  filter :team, :collection => -> { TeamDecorator
-                                      .decorate_collection(Team.all)
-                                      .map { |team| team.full_name_and_id } }
+  filter :team, collection: -> { TeamDecorator
+                                   .decorate_collection(Team.all)
+                                   .map { |team| team.full_name_and_id } }
   filter :locale
   filter :opponent
 
@@ -39,15 +39,14 @@ ActiveAdmin.register Event do
 
   form do |f|
     f.inputs do
-      f.input :team_id,
-        :as         => :select,
-        :collection => TeamDecorator.decorate_collection(Team.all).map do |team|
-          team.full_name_and_id
-        end
+      f.input :team_id, as: :select,
+        collection: TeamDecorator
+                      .decorate_collection(Team.all)
+                      .map { |team| team.full_name_and_id }
       f.input :locale
-      f.input :description, :as => :html_editor
+      f.input :description, as: :html_editor
       f.input :opponent
-      f.input :date, :as => :just_datetime_picker
+      f.input :date, as: :just_datetime_picker
     end
     f.actions
   end
