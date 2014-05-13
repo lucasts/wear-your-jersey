@@ -1,6 +1,6 @@
-ActiveAdmin.register Role, { :sort_order => :position_asc } do
+ActiveAdmin.register Role, { sort_order: :position_asc } do
 
-  menu :parent => "Modalities"
+  menu parent: "Modalities"
 
   controller do
     def permitted_params

@@ -1,5 +1,5 @@
 class SponsorCategory < ActiveRecord::Base
-  has_enumeration_for :grandeur, :with => SponsorCategoryGrandeurType, :create_helpers => true
+  has_enumeration_for :grandeur, with: SponsorCategoryGrandeurType, create_helpers: true
   has_many :sponsors
 
   validates :title, presence: true

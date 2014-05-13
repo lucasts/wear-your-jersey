@@ -1,6 +1,6 @@
-ActiveAdmin.register Player, { :sort_order => :position_asc } do
+ActiveAdmin.register Player, { sort_order: :position_asc } do
 
-  menu :parent => "Teams and players"
+  menu parent: "Teams and players"
 
   controller do
     def permitted_params
@@ -11,9 +11,9 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
 
   filter :first_name
   filter :nickname
-  filter :team, :collection => -> { TeamDecorator
-                                      .decorate_collection(Team.all)
-                                      .map { |team| team.full_name_and_id } }
+  filter :team, collection: -> { TeamDecorator
+                                   .decorate_collection(Team.all)
+                                   .map { |team| team.full_name_and_id } }
   filter :role
 
   sortable
@@ -55,28 +55,26 @@ ActiveAdmin.register Player, { :sort_order => :position_asc } do
       f.input :first_name
       f.input :last_name
       f.input :nickname
-      f.input :player_image, :required => false
+      f.input :player_image, required: false
     end
     f.inputs do
-      f.input :team_id,
-        :as         => :select,
-        :collection => TeamDecorator.
-                         decorate_collection(Team.all).map { |team| team.full_name_and_id },
-        :input_html => {
+      f.input :team_id, as: :select,
+        input_html: {
           "data-get-positions-input" => "",
           "data-get-positions-url"   => "/admin/teams/:id/roles_of_modality"
+        },
+        collection: TeamDecorator.
+                      decorate_collection(Team.all).map { |team| team.full_name_and_id }
+      f.input :role_id, as: :select, collection: [], hint: "Select a team first",
+        input_html: {
+          "data-get-positions-output" => ""
         }
-      f.input :role_id,
-        :as         => :select,
-        :collection => [],
-        :input_html => { "data-get-positions-output" => "" },
-        :hint       => "Select a team first"
       f.input :number
     end
     f.inputs do
-      f.input :birth, :as => :datepicker
+      f.input :birth, as: :datepicker
       f.input :hometown
-      f.input :bio, :as => :html_editor
+      f.input :bio, as: :html_editor
     end
     f.actions
   end

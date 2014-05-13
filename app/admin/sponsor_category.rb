@@ -1,10 +1,10 @@
-ActiveAdmin.register SponsorCategory, { :sort_order => :position_asc } do
+ActiveAdmin.register SponsorCategory, { sort_order: :position_asc } do
 
-  menu :parent => "Sponsors"
+  menu parent: "Sponsors"
 
   controller do
     def permitted_params
-      params.permit :sponsor_category => [:title, :grandeur]
+      params.permit sponsor_category: [:title, :grandeur]
     end
   end
 
@@ -34,9 +34,8 @@ ActiveAdmin.register SponsorCategory, { :sort_order => :position_asc } do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :grandeur,
-        :as => :select,
-        :collection => SponsorCategoryGrandeurType.to_a
+      f.input :grandeur, as: :select,
+        collection: SponsorCategoryGrandeurType.to_a
     end
     f.actions
   end
