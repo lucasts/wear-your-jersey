@@ -11,7 +11,7 @@ header {
   .header-partners-list {
     list-style: none;
     position: absolute;
-    top: 0;
+    top: 20px;
     right: 10px;
     padding: 0;
   }
@@ -19,8 +19,8 @@ header {
   .header-partners-list-item {
     display: inline-block;
     vertical-align: top;
-    width: 150px;
-    height: 110px;
+    width: 100px;
+    height: 75px;
     margin-left: 10px;
     text-align: right;
     overflow: hidden;

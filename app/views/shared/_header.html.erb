@@ -8,10 +8,10 @@
           <% category.sponsors.each do |sponsor| %>
             <li class="header-partners-list-item">
               <% if sponsor.link.blank? %>
-                <%= image_tag sponsor.sponsor_image.url(:small) %>
+                <%= image_tag sponsor.sponsor_image.url(:thumb) %>
               <% else %>
                 <%= link_to sponsor.link, target: '_blank' do %>
-                  <%= image_tag sponsor.sponsor_image.url(:small) %>
+                  <%= image_tag sponsor.sponsor_image.url(:thumb) %>
                 <% end %>
               <% end %>
             </li>
