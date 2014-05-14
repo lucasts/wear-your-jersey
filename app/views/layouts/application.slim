@@ -13,6 +13,9 @@ html
     = render 'shared/menu'
 
     .wrapper
-      = yield
+      .main
+        = yield
+      = render 'shared/side_bar'
 
     = render 'shared/footer'
+
