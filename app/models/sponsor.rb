@@ -4,7 +4,7 @@ class Sponsor < ActiveRecord::Base
   acts_as_list
 
   has_attached_file :sponsor_image,
-    styles: { thumb: "100x>", small: "350x>" }
+    styles: { thumb: "100x>", small: "300x>", medium: "450x>" }
   validates_attachment_content_type :sponsor_image,
     content_type: ["image/jpg", "image/jpeg", "image/png"]
 end
