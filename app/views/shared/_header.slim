@@ -4,7 +4,7 @@ header
       = image_tag "emblem.svg", class: "emblem"
 
       ul.header-partners-list
-        - @master_categories.each do |category|
+        - @categories_master_sponsors.each do |category|
           li.header-partners-list-item.title = category.title
           - category.sponsors.each do |sponsor|
             li.header-partners-list-item
