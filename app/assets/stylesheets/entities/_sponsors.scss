@@ -1,0 +1,10 @@
+.sponsors-list {
+  list-style: none;
+  padding: 0;
+
+  .master_sponsor, .sponsor, .partner {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px 10px 0;
+  }
+}

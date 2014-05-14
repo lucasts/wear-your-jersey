@@ -2,7 +2,7 @@ h1 Sponsors
 - [@categories_master_sponsors, @categories_sponsors, @categories_partners].each do |categories|
   - categories.each do |category|
     h3 = category.title
-    ul
+    ul.sponsors-list
       -category.sponsors.each do |sponsor|
         - if category.master_sponsor?
           li.master_sponsor = link_to sponsor_path(sponsor)
@@ -15,5 +15,5 @@ h1 Sponsors
             = image_tag sponsor.sponsor_image.url(:thumb)
 
 
-h2 Blah
+h2 You can be a sponsor too!
 p Bacon ipsum dolor sit amet cow chicken rump sirloin capicola bresaola pig beef. Beef ribs chicken sausage porchetta tenderloin meatloaf, tri-tip capicola. Bacon leberkas t-bone salami, tenderloin fatback landjaeger sirloin prosciutto spare ribs beef ribs shankle turkey ribeye. Pork belly short loin meatball tail meatloaf pancetta pig tongue pastrami. Pancetta sausage hamburger, ham meatball rump venison. Chuck shank capicola pancetta, tail meatloaf hamburger beef pork loin sausage spare ribs.
