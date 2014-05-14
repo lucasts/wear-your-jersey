@@ -11,6 +11,7 @@ gem 'paperclip', '~> 4.1'
 gem 'draper'
 gem 'active_model_serializers'
 gem 'enumerate_it'
+gem 'slim-rails'
 
 # Activeadmin
 gem 'activeadmin', github: 'gregbell/active_admin'
