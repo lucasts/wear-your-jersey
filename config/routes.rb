@@ -3,4 +3,6 @@ WearYourJersey::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   root 'home#index'
+
+  resources :sponsors, only: [:index, :show]
 end
