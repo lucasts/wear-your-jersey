@@ -1,18 +1,17 @@
 h1 Sponsors
-- [@categories_master_sponsors, @categories_sponsors, @categories_partners].each do |categories|
-  - categories.each do |category|
-    h3 = category.title
-    ul.sponsors-list
-      -category.sponsors.each do |sponsor|
-        - if category.master_sponsor?
-          li.master_sponsor = link_to sponsor_path(sponsor)
-            = image_tag sponsor.sponsor_image.url(:medium)
-        - if category.sponsor?
-          li.sponsor = link_to sponsor_path(sponsor)
-            = image_tag sponsor.sponsor_image.url(:small)
-        - if category.partner?
-          li.partner = link_to sponsor_path(sponsor)
-            = image_tag sponsor.sponsor_image.url(:thumb)
+- @categories.each do |category|
+  h3 = category.title
+  ul.sponsors-list
+    -category.sponsors.each do |sponsor|
+      - if category.master_sponsor?
+        li.master_sponsor = link_to sponsor_path(sponsor)
+          = image_tag sponsor.sponsor_image.url(:medium)
+      - if category.sponsor?
+        li.sponsor = link_to sponsor_path(sponsor)
+          = image_tag sponsor.sponsor_image.url(:small)
+      - if category.partner?
+        li.partner = link_to sponsor_path(sponsor)
+          = image_tag sponsor.sponsor_image.url(:thumb)
 
 
 h2 You can be a sponsor too!
