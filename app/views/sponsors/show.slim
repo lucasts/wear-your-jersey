@@ -1,0 +1,4 @@
+h1 = @sponsor.title
+= image_tag @sponsor.sponsor_image.url(:small), class: 'sponsor-floating-image'
+p = @sponsor.description.html_safe
+= link_to 'Visit the sponsor\'s website', @sponsor.link
